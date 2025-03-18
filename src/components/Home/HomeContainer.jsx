@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react'
 import Home from './Home'
 import axios from 'axios'
 
-let currentWeatherKey = "9a1d98e008294f9809be66957aa65613"
+let currentWeatherKey = process.env.currentWeatherKey
 const HomeContainer = () => {
       
     const [cityName, setCityName] = useState("")
