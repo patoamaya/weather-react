@@ -1,6 +1,5 @@
 import './Home.css'
 import {Button, TextField} from '@mui/material'
-import BoltIcon from '@mui/icons-material/Bolt';
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 import WaterDropRoundedIcon from '@mui/icons-material/WaterDropRounded';
 import EmojiPeopleRoundedIcon from '@mui/icons-material/EmojiPeopleRounded';
@@ -15,7 +14,6 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
   
   
   let dailyUrl = dailyData.main ?  `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png` : ""
-  // let fivedaysUrl = `https://openweathermap.org/img/wn/${}@2x.png`
   
   
   
@@ -25,8 +23,7 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
         <div
         className='fullForm'>
         <form action=""onSubmit={(e)=>{handleSubmit(e)}}>
-        {/* <input type="text" onChange={(e)=>{handleChange(e)}} className='fieldInput' 
-        placeholder='Nombre de la ciudad'/> */}
+  
 
         <TextField
          color="secondary"
@@ -66,7 +63,7 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
             <div className="currentInfoContainer">
               <p><EmojiPeopleRoundedIcon className='fl'/>  Sensación térmica. : {dailyData.main.feels_like.toFixed(1)} °C</p> 
               <p> <WbSunnyRoundedIcon className='clima'/> Clima : {dailyData.weather[0].description}</p>
-              <p>  <WaterDropRoundedIcon className='humidity'/> Humedad: {dailyData.main.humidity} %</p>
+              <p> <WaterDropRoundedIcon className='humidity'/> Humedad: {dailyData.main.humidity} %</p>
 
             </div>
             </div>
@@ -128,19 +125,13 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
               
               <div className='empty'>
         
-              <div
-             className='emptyTitleContainer'>
-                <h1 className='titleName'>Weather App</h1>
+              <div className='emptyTitleContainer'>
+                <p>Weather App </p>
               </div>  
         
               <div
                 className='emptyForm'>
-                <form action=""onSubmit={(e)=>{handleSubmit(e)}}>
-                {/* <input type="text" onChange={(e)=>{handleChange(e)}} className='fieldInput' 
-                placeholder='Nombre de la ciudad'/> */}
-        
-                
-                
+                <form action=""onSubmit={(e)=>{handleSubmit(e)}}>                
                 <TextField
                  color="secondary"
                  id="outlined-basic"

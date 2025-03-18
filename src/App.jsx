@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeContainer from './components/Home/HomeContainer'
-import Footer from './components/Footer/Footer'
 
 
 
@@ -10,9 +9,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
       <Routes>
-        <Route element={<Footer/>}>
-      <Route path='/' element={<HomeContainer/>}/>
-      </Route>
+        <Route path='/' element={<HomeContainer/>}/>
       </Routes>
       </BrowserRouter>
     </div>

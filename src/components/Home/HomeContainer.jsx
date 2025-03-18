@@ -13,23 +13,11 @@ const HomeContainer = () => {
     const [dailyData, setDailyData] = useState({})
     const [err, setErr] = useState({})
     
-    // const weatherData =(endpoint, setter)=>{
-    //   if(cityName.length != 0){
-        
-    //     let getData = axios.get(endpoint)
-    //     getData.then((res)=>setter(res.data))
-    //     .catch((err)=>console.log(err))
-    //   } 
-    // }
-    
       
     
       let handleChange = (e)=>{
         let data = e.target.value
         setCityName(data)
-
-
-         
       }
     
       let currentWeatherEndpoint= `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${currentWeatherKey}&lang=es&units=metric`
