@@ -6,17 +6,8 @@ import EmojiPeopleRoundedIcon from '@mui/icons-material/EmojiPeopleRounded';
 
 
 const Home = ({handleChange, handleSubmit, dailyData, err }) => {
-  
-  
-  
-  
-  
-  
-  
   let dailyUrl = dailyData.main ?  `https://openweathermap.org/img/wn/${dailyData.weather[0].icon}@2x.png` : ""
-  
-  
-  
+ 
     if(dailyData.cod === 200) {
       return(
         <main className='container'>
@@ -154,8 +145,6 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
                 </div>
             </form>
               </div >
-        
-        
                 </div>
              
                 </main>
@@ -164,7 +153,4 @@ const Home = ({handleChange, handleSubmit, dailyData, err }) => {
     
     }
         
-
- 
-
 export default Home
