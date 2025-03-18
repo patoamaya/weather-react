@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react'
 import Home from './Home'
 import axios from 'axios'
 
-let currentWeatherKey = process.env.currentWeatherKey
+let currentWeatherKey = import.meta.env.VITE_USER_CURRENTWEATHERKEY
 const HomeContainer = () => {
       
     const [cityName, setCityName] = useState("")
@@ -19,7 +19,6 @@ const HomeContainer = () => {
     useEffect(()=>{
       setErr(err)
       setDailyData("vacio")
-      console.log(err)
     },[err])
 
   const handleSubmit= (e)=>{
