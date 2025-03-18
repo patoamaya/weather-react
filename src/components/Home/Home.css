@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: url(../../public/assets/back.jpg);
+    background-image: url(../../../public/assets/back.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
