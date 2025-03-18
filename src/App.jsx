@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import HomeContainer from './components/Home/HomeContainer'
 
 
-
 function App() {
 
   return (
